@@ -3,17 +3,19 @@ import { BrowserRouter,Routes , Route } from 'react-router-dom'
 
 import { useState } from 'react'
 import './App.css'
-import Admin from './components/Admin'
+import Layout from './components/Admin/Layout'
+import Product from './components/Admin/Product'
+import NotFound from './components/NotFound'
 
 function App() {
 
   return (
    <BrowserRouter>
    <Routes>
-
-  {/* <Route path="/" element={<h1> Welcome to rohti </h1>}/> */}
-  <Route path="/admin" element={<Admin/>}/>
-
+   <Route path="/admin">
+  <Route path="product" element={<Product/>}/>
+   </Route>
+ <Route path="*" element={<NotFound/>}/>
    </Routes>
    </BrowserRouter>
   )

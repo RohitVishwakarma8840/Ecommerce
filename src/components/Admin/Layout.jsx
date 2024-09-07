@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-const Admin =()=> {
+const Layout =()=> {
  const [size , setSize]=useState(280);
  const [accountMenu , setAccountMenu]=useState(false);
 
@@ -66,4 +66,4 @@ style={{
   )
 }
 
-export default Admin
+export default Layout
