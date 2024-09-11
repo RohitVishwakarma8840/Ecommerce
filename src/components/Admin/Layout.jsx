@@ -10,6 +10,13 @@ const Layout =({children})=> {
  console.log(location);
 
  const menus=[
+
+  {
+    label: "Dashboard",
+    icon: <i className="ri-dashboard-3-line mr-2"></i>,
+    link : "/admin/dashboard",
+  } , 
+
   {
     label: "Products",
     icon: <i className="ri-shopping-cart-line mr-2"></i>,
@@ -24,17 +31,28 @@ const Layout =({children})=> {
 
   {
     label : "Payments",
-    icon : ,
+    icon : <i className="ri-refund-2-line mr-2"></i>,
     link : "/admin/payments"
-  }
+  },
 
+  {
+    label : "Settings",
+    icon : <i className="ri-settings-3-line mr-2"></i>,
+    link : "/admin/settings"
+  },
+
+  {
+    label : "Logout",
+    icon : <i class="ri-logout-circle-r-line mr-2"></i>,
+    link : "/admin/logout"
+  },
 
  ]
 
   return (
     <div>
 
-<aside className='bg-indigo-600 fixed top-0 left-0 h-full '
+<aside className='bg-indigo-600 fixed top-0 left-0 h-full overflow-hidden '
 style={{
     width:size,
     transition:'0.3s'
