@@ -74,7 +74,7 @@ function Orders() {
      {
        Orders.map((item,index)=>(
         <tr key={index} className='text-center' style={{
-          background : (index+1)%2=== 0 ? '' : 'gray'
+          background : (index+1)%2=== 0 ? 'white' : '#ecfccb'
 
         }}>
           <td className='py-4'>{item.OrderId}</td>
