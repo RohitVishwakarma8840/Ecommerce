@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Children } from 'react'
 import { useState } from 'react'
 
-const Layout =()=> {
+const Layout =({children})=> {
  const [size , setSize]=useState(280);
  const [accountMenu , setAccountMenu]=useState(false);
 
@@ -36,7 +36,7 @@ style={{
 
   <div>
     <button className="relative">
-    <img src="./images/avt.jpeg" alt="" className='w-10 h-10 rounded-full' onClick={()=>{setAccountMenu(!accountMenu)}}/>
+    <img src="/images/avt.jpeg" alt="" className='w-10 h-10 rounded-full' onClick={()=>{setAccountMenu(!accountMenu)}}/>
     {accountMenu && 
        <div className="absolute top-18 right-0 bg-white p-6   w-[200px] shadow-lg ">
       <div>
@@ -58,6 +58,10 @@ style={{
 
 
   </nav>
+
+  <div className='p-6'>
+    {children}
+  </div>
 
   </section>
 
